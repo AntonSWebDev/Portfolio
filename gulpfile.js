@@ -89,7 +89,7 @@ function build() {
 			'app/*.php',
 			'app/css/style.min.css',
 			'app/js/main.min.js',
-			'app/js/videos/**'
+			'app/videos/**'
 		], {base: 'app'})
 	.pipe(dest('dist'))
 }
