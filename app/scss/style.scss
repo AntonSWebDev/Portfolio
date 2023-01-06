@@ -29,7 +29,7 @@ body {
 	color: #fff;
 	@include montserrat-400;
 	font-size: 16px;
-	line-height: 1.3;
+	line-height: 18px;
 	height: 100%;
 }
 a {
@@ -38,15 +38,6 @@ a {
 }
 button {
 	cursor: pointer;
-}
-label.error {
-  display: none!important;
-}
-form input.error{
-  border-color:red;
-}
-form textarea.error{
-	border-color:red;
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -78,7 +69,7 @@ input[type="radio"].visually-hidden {
 .title {
 	@include montserrat-700;
 	font-size: 46px;
-	line-height: 1.3;
+	line-height: 60px;
 	text-align: center;
 	color: #000000;
 }
@@ -109,11 +100,12 @@ input[type="radio"].visually-hidden {
 
 	&__title {
 		font-size: 56px;
+		line-height: 73px;
 		margin-bottom: 25px;
 	}
 	&__suptitle {
 		max-width: 400px;
-		line-height: 1.5;
+		line-height: 24px;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
 		text-align: center;
@@ -158,9 +150,6 @@ input[type="radio"].visually-hidden {
 				transform: translateY(-15px);
 			}
 		}
-		div {
-			// min-height: 215px;
-		}
 		&__link {
 			display: block;
 			padding: 20px 20px 30px;
@@ -172,7 +161,7 @@ input[type="radio"].visually-hidden {
 		}
 		&__title {
 			font-size: 24px;
-			line-height: 130%;
+			line-height: 31px;
 			margin-bottom: 13px;
 		}
 	}
@@ -192,7 +181,7 @@ input[type="radio"].visually-hidden {
 	}
 	&__desc {
 		@include montserrat-400;
-		line-height: 1.5;
+		line-height: 24px;
 		max-width: 730px;
 		margin: 0 auto 60px;
 		span {
@@ -235,7 +224,7 @@ input[type="radio"].visually-hidden {
 			display: inline-block;
 			@include montserrat-600;
 			font-size: 16px;
-			line-height: 1.3;
+			line-height: 36px;
 			margin-top: 15px;
 		}
 	}
@@ -266,7 +255,6 @@ input[type="radio"].visually-hidden {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
-		// justify-content: space-between;
 	}
 	&__feedback-button {
 		padding: 12px 30px 8px;
@@ -279,9 +267,6 @@ input[type="radio"].visually-hidden {
 	}
 	&__feedback-link {
 		margin-left: 15px;
-		// &:last-child {
-		// 	margin-left: 0;
-		// }
 		svg {
 			transition: all .5s ease;
 			border-radius: 50%;
