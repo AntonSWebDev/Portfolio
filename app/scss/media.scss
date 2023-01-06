@@ -60,12 +60,16 @@
 		&__social {
 			margin-bottom: 50px;
 			font-size: 14px;
-
+		}
+		&__feedback-links {
+			justify-content: space-evenly;
+		}
+		&__feedback-link {
+			margin-left: 0;
 		}
 		&__social-text {
 			margin-bottom: 20px;
 		}
-
 		&__social-icons {
 			justify-content: space-between;
 		}
@@ -77,6 +81,7 @@
 		}
 		&__feedback-text {
 			font-size: 14px;
+			text-align: center;
 		}
 	}
 

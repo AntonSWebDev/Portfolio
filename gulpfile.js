@@ -86,7 +86,6 @@ function build() {
 	return src([
 			'app/fonts/**/*',
 			'app/*.html',
-			'app/*.php',
 			'app/css/style.min.css',
 			'app/js/main.min.js',
 			'app/videos/**'
