@@ -30,7 +30,6 @@ body {
 	@include montserrat-400;
 	font-size: 16px;
 	line-height: 1.3;
-
 	height: 100%;
 }
 a {
@@ -79,7 +78,7 @@ input[type="radio"].visually-hidden {
 .title {
 	@include montserrat-700;
 	font-size: 46px;
-	line-height: 130%;
+	line-height: 1.3;
 	text-align: center;
 	color: #000000;
 }
@@ -87,22 +86,22 @@ input[type="radio"].visually-hidden {
 	display: inline-block;
 	@include montserrat-700;
 	text-transform: uppercase;
-
 	border-radius: 50px;
 	transition: all ease .5s;
 	border: none;
 }
+.lock {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
 
 .header {
 	@include montserrat-700;
-
 	position: relative;
 	min-height: 100vh;
 	text-align: center;
-
 	background-position: center;
 	background-size: cover;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -110,34 +109,26 @@ input[type="radio"].visually-hidden {
 
 	&__title {
 		font-size: 56px;
-
 		margin-bottom: 25px;
 	}
-
 	&__suptitle {
 		max-width: 400px;
-
 		line-height: 1.5;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
 		text-align: center;
 	}
-
 	&__arrow {
 		width: 50px;
 		height: 50px;
-
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position: absolute;
 		bottom: 48px;
-
 		animation-name: arrowDown;
 		animation-duration: 1.5s;
 		animation-iteration-count: infinite;
-
-
 	}
 }
 
@@ -145,27 +136,20 @@ input[type="radio"].visually-hidden {
 	@include montserrat-600;
 	color: #000000;
 	padding: 80px 0 115px;
-
 	&__title {
 		padding-bottom: 70px;
 	}
-
 	.cards {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-
 		&__item {
 			max-width: 540px;
 			margin-bottom: 30px;
-			
 			position: relative;
-
 			transition: all .5s ease;
-
 			box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
 			background-color: #fff;
-
 			&:nth-last-child(1),
 			&:nth-last-child(2) {
 				margin-bottom: 0;
@@ -174,27 +158,64 @@ input[type="radio"].visually-hidden {
 				transform: translateY(-15px);
 			}
 		}
+		div {
+			// min-height: 215px;
+		}
 		&__link {
 			display: block;
 			padding: 20px 20px 30px;
 		}
-
 		&__img {
 			margin-bottom: 20px;
-			max-width: 100%;
+			width: 100%;
+			display: block;
 		}
-
 		&__title {
 			font-size: 24px;
 			line-height: 130%;
-
 			margin-bottom: 13px;
 		}
 	}
 }
 
+.project {
+	color: #000;
+	text-align: center;
+	padding: 80px 120px;
+	&__title {
+		padding: 0px 0 40px;
+		font-size: 28px;
+	}
+	&__img {
+		margin-bottom: 70px;
+		max-width: 100%;
+	}
+	&__desc {
+		@include montserrat-400;
+		line-height: 1.5;
+		max-width: 730px;
+		margin: 0 auto 60px;
+		span {
+			display: block;
+			margin-top: 15px;
+		}
+		a {
+			color: #275BEC;
+		}
+	}
+	&__btn {
+		padding: 20px 30px;
+		border: 3px solid #275BEC;
+		color: #275BEC;
+		&:hover {
+			background-color: #275BEC;
+			color: #fff;
+		}
+	}
+}
+
 .footer {
-	padding: 45px 0 130px;
+	padding: 50px 0 50px;
 	background-color: $footerBg;
 	&__copy,
 	&__social,
@@ -202,12 +223,10 @@ input[type="radio"].visually-hidden {
 		max-width: 350px;
 		flex-grow: 1;
 	}
-
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 	}
-
 	&__copy-title {
 		@include montserrat-700;
 		font-size: 28px;
@@ -226,7 +245,6 @@ input[type="radio"].visually-hidden {
 	&__social-text {
 		@include montserrat-600;
 	}
-
 	&__social-icons {
 		display: flex;
 
@@ -235,21 +253,20 @@ input[type="radio"].visually-hidden {
 			margin-left: 30px;
 		}
 	}
-
 	&__social-icon {
 		transition: all .5s ease;
 		&:hover {
 			transform: scale(1.25);
 		}
 	}
-
 	&__feedback > p {
 		margin-top: 15px;
 	}
 	&__feedback-links {
 		display: flex;
+		flex-direction: row-reverse;
 		align-items: center;
-		justify-content: space-between;
+		// justify-content: space-between;
 	}
 	&__feedback-button {
 		padding: 12px 30px 8px;
@@ -260,195 +277,39 @@ input[type="radio"].visually-hidden {
 			color: #1E4776;
 		}
 	}
-
 	&__feedback-link {
-		display: inline-block;
+		margin-left: 15px;
 		svg {
 			transition: all .5s ease;
 			border-radius: 50%;
 			display: block;
-			border: 3px solid transparent;
-		}
-		path {
-			transition: all .5s ease;
-			background-color: transparent;
-			border-radius: 50%;
 		}
 		svg:hover {
-			background-color: #fff;
-			border: 3px solid #fff;
-			path {
-				fill: #1E4776;
+			transform: scale(1.25);
+			background-color: #1E4776;
+		}
+	}
+	.teleg {
+		path{
+			&:nth-child(1) {
+				fill: #fff;				
+			}
+		}
+	}
+	.git {
+		path{
+			&:nth-child(1) {
+				fill: #fff;		
+			}
+			&:nth-child(2) {
+				fill: #fff;				
 			}
 		}
 	}
 	&__feedback-text {
 		font-size: 15px;
 		color: $footerTextCol;
-	}
-}
-
-.popup.show {
-	display: block;
-}
-.popup {
-	display: none;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	&__overlay {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.7);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	&__body {
-		width: 700px;
-		height: 500px;
-		border-radius: 10px;
-		background: #fff;
-		padding: 40px;
-		position: relative;
-	}
-	&__close {
-		cursor: pointer;
-		&::before {
-			position: absolute;
-			content: "X";
-			top: 10px;
-			right: 0;
-			width: 40px;
-			height: 40px;
-			color: #000;
-			font-size: 35px;
-			margin: auto auto;
-		}
-	}
-	&__title {
-		margin-bottom: 70px;
-	}
-	&__form {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 25px;
-		input	{ 
-			display: inline-block;
-			width: 100%;
-			padding: 10px 10px;
-			height: 50px;
-			border: none;
-			border-bottom: 3px solid #1E4776;
-			color: #1E4776;
-			outline: none;
-			@include montserrat-600;
-			font-size: 16px;
-			line-height: 1.3;
-			&:focus {
-				border: 3px solid #1E4776;
-			}
-			&:placeholder {
-				@include montserrat-600;
-				font-size: 16px;
-				line-height: 1.3;
-			}
-		}
-		textarea {
-			display: block;
-			width: 100%;
-			height: 150px;
-			padding: 10px 10px;
-			grid-column: 1 / 3;
-			border: 3px solid #1E4776;
-			color: #1E4776;
-			@include montserrat-600;
-			font-size: 16px;
-			line-height: 1.3;
-			outline: none;
-			&:focus {
-				border: 4px solid #1E4776;
-			}
-			&:placeholder {
-				@include montserrat-600;
-				font-size: 16px;
-				line-height: 1.3;
-			}
-		}
-		button {
-			grid-column: 1 / 3;
-			padding: 12px 30px;
-			border: 3px solid #1E4776;
-			color: #1E4776;
-			max-width: 320px;
-			width: 100%;
-			margin: 0 auto;
-			background: transparent;
-			outline: none;
-			&:hover {
-				background-color: #1E4776;
-				color: #fff;
-			}
-			&:focus {
-				background-color: #1E4776;
-				color: #fff;
-			}
-		}
-	}
-	&__name {
-
-	}
-	&__email {}
-	&__text {}
-	&__btn {}
-}
-
-.project {
-	color: #000;
-	text-align: center;
-
-	padding: 80px 120px;
-
-	&__title {
-		padding: 0px 0 40px;
-		font-size: 28px;
-	}
-	&__img {
-		margin-bottom: 70px;
-		max-width: 100%;
-	}
-
-	&__desc {
-		@include montserrat-400;
-		line-height: 1.5;
-
-		max-width: 730px;
-		margin: 0 auto 60px;
-
-		span {
-			display: block;
-			margin-top: 15px;
-		}
-		a {
-			color: #275BEC;
-		}
-	}
-
-	&__btn {
-		padding: 20px 30px;
-
-		border: 3px solid #275BEC;
-		color: #275BEC;
-
-		&:hover {
-			background-color: #275BEC;
-			color: #fff;
-		}
+		text-align: right;
 	}
 }
 

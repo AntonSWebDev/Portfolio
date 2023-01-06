@@ -49,8 +49,6 @@ function scripts() {
 	return src([
 			'node_modules/jquery/dist/jquery.js',
 			'node_modules/vide/dist/jquery.vide.js',
-			'app/js/jquery.maskedinput.js',
-			'app/js/jquery.validate.min.js',
 			'app/js/main.js'
 		])
 		.pipe(concat('main.min.js'))
@@ -91,6 +89,7 @@ function build() {
 			'app/*.php',
 			'app/css/style.min.css',
 			'app/js/main.min.js',
+			'app/js/videos/**'
 		], {base: 'app'})
 	.pipe(dest('dist'))
 }

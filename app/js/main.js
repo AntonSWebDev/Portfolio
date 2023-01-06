@@ -7,41 +7,21 @@ jQuery(document).ready(function($){
 
 	$('.modal-btn').click(function(e) {
 		e.preventDefault();
+		$('body').addClass('lock');
 		var destinationPopup = $(this).attr("href");
 		$(destinationPopup).addClass('show');
 		$(destinationPopup + ' .popup__close').click(function() {
 			$(destinationPopup).removeClass('show');
+			$('body').removeClass('lock');
 		});
-		// $(destinationPopup + ' .popup__overlay').click(function() {
-		// 	$(destinationPopup).removeClass('show');
-		// });
+		$(destinationPopup + ' .popup__body').click(function(e) {
+			e.stopPropagation();
+		});
+		$(destinationPopup + ' .popup__overlay').click(function() {
+			$(destinationPopup).removeClass('show');
+			$('body').removeClass('lock');
+		});
+		
 	});
-
-  $(".phone").mask("+380 (99) 999-99-99"); 
   
-  jQuery('form button').click( function() {
-  	var form = jQuery(this).closest('form');
-  	
-  	if ( form.valid() ) {
-  		form.css('opacity','.5');
-  		var actUrl = form.attr('action');
-
-  		jQuery.ajax({
-  			url: actUrl,
-  			type: 'post',
-  			dataType: 'html',
-  			data: form.serialize(),
-  			success: function(data) {
-  				form.html(data);
-  				form.css('opacity','1');
-          form.find('.status').html('форма отправлена успешно');
-          //$('#myModal').modal('show') // для бутстрапа
-  			},
-  			error:	 function() {
-  			 	form.find('.status').html('серверная ошибка');
-  			}
-  		});
-  	}
-  });
-
 });
