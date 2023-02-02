@@ -1,119 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-  <title>Сайт Портфолио</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.min.css">
+  <title>Freebie-Agency</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="">
   <div class="main-wrapper">
 
-    <header id="header" class="header">
-      <h1 class="header__title">
-        Антон Елизаров
-      </h1>
-      <p class="header__suptitle">
-        фрилансер, веб-разработчик, создание сайтов
-      </p>
-      <a class="header__arrow" href="#portfolio">
-        <img src="./img/header-arrow.svg" alt="Arrow">
-      </a>
-    </header>
-
     <main class="main">
-      <article id="portfolio" class="portfolio">
+      <section class="project">
         <div class="container">
-          <h2 class="title portfolio__title">
-            Портфолио
-          </h2>
-          <ul class="cards">
-            <li class="cards__item">
-              <a class="cards__link" href="./body-time.html" target="_blank">
-                <img class="cards__img" src="./img/body-time.jpg" alt="BodyTime">
-                <h3 class="cards__title">
-                  BodyTime
-                </h3>
-                <p class="cards__text">
-                  Верстка адапивного многостраничного сайта.
-                </p>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a class="cards__link" href="./createx.html" target="_blank">
-                <img class="cards__img" src="./img/createx-min.jpg" alt="Createx">
-                <h3 class="cards__title">
-                  Createx
-                </h3>
-                <p class="cards__text">
-                  Верстка адапивного лендинга.
-                </p>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a class="cards__link" href="./freebie-agency.html" target="_blank">
-                <img class="cards__img" src="./img/freebie-agency.png" alt="Freebie-Agency">
-                <h3 class="cards__title">
-                  Finsweet
-                </h3>
-                <p class="cards__text">
-                  Верстка адапивного лендинга.
-                </p>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a class="cards__link" href="./auto.html" target="_blank">
-                <img class="cards__img" src="./img/auto-min.jpg" alt="Finsweet">
-                <h3 class="cards__title">
-                  Finsweet
-                </h3>
-                <p class="cards__text">
-                  Верстка адапивного лендинга.
-                </p>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a class="cards__link" href="queen.html" target="_blank">
-                <img class="cards__img" src="./img/queen.jpg" alt="Ронни Ромеро">
-                <h3 class="cards__title">
-                  Queen
-                </h3>
-                <p class="cards__text">
-                  Верстка адаптивного лендинга.
-                </p>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a class="cards__link" href="lestniza.html" target="_blank">
-                <img class="cards__img" src="./img/lestniza.jpg" alt="Креатив на лестнице">
-                <h3 class="cards__title">
-                  Креатив на лестнице
-                </h3>
-                <p class="cards__text">
-                  Верстка адаптивного лендинга.
-                </p>
-              </a>
-            </li>
-            <li class="cards__item">
-              <a class="cards__link" href="./KRepair.html" target="_blank">
-                <img class="cards__img" src="./img/krepair.jpg" alt="KRepair">
-                <h3 class="cards__title">
-                  KRepair
-                </h3>
-                <p class="cards__text">
-                  Верстка адаптивного многостраничного сайта.
-                </p>
-              </a>
-            </li>
-          </ul>
+          <h1 class="title project__title">
+            Верстка сайта «Freebie-Agency»
+          </h1>
+          <img class="project__img" src="./img/freebie-agency-main.png" alt="Freebie-Agency">
+          <p class="project__desc">
+            Верстка адаптивного лендинга.
+            Freebie-Agency - макет адаптивного лендинга компании, помогающей стартапам в бизнесе.
+            Главная страница с меню-бургером, фильтром, контактами и модальным окном.
+            <span>Адрес сайта: <a href="https://aelizarov758886.github.io/Freebie-Agency/">site.com</a></span>
+          </p>
+          <a class="btn project__btn" href="index.html">
+            ← ВЕРНУТЬСЯ НА ГЛАВНУЮ
+          </a>
         </div>
-      </article>
+      </section>
     </main>
 
     <footer class="footer">
@@ -174,7 +92,7 @@
     </footer>
 
   </div>
-  <script src="./js/main.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
